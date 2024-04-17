@@ -1,5 +1,5 @@
 
---Vytvoøení "primárního klíèe" k tabulce NetflixCast 
+--VytvorenÃ­ "primÃ¡rnÃ­ho klÃ­ce" k tabulce NetflixCast 
 
 WITH CTE AS (
     SELECT id,
@@ -10,7 +10,7 @@ UPDATE CTE
 SET id = new_id;
 
 
---Vytvoøení "primárního klíèe" k tabulce NetflixGenre
+--VytvorenÃ­ "primÃ¡rnÃ­ho klÃ­ce" k tabulce NetflixGenre
 
 WITH CTE AS (
     SELECT id,
@@ -21,7 +21,7 @@ UPDATE CTE
 SET id = new_id;
 
 
---Vytvoøení "primárního klíèe" k tabulce NetflixDescription
+--VytvorenÃ­ "primÃ¡rnÃ­ho klÃ­ce" k tabulce NetflixDescription
 
 WITH CTE AS (
     SELECT id,
@@ -32,7 +32,7 @@ UPDATE CTE
 SET id = new_id;
 
 
--- Pøidání "cizích klíèù" do tabulky NetflixShows
+-- PridÃ¡nÃ­ "cizÃ­ch klÃ­cu" do tabulky NetflixShows
 
 ALTER TABLE NetflixShows
 ADD CONSTRAINT FK_NetflixShows_genre_id
@@ -47,7 +47,7 @@ ADD CONSTRAINT FK_NetflixShows_desc_id
 FOREIGN KEY (desc_id) REFERENCES NetflixDescription (id);
 
 
--- Pøidání hodnot k cizím klíèùm v tabulce NetflixShows
+-- PridÃ¡nÃ­ hodnot k cizÃ­m klÃ­cum v tabulce NetflixShows
 
 -- genre
 
