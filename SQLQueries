@@ -1,4 +1,4 @@
--- Celý dataset
+-- CelÃ½ dataset
 
 
 SELECT 
@@ -9,7 +9,7 @@ FROM NetflixShows show
 	 JOIN NetflixDescription des ON show.desc_id = des.id;
 
 
--- Úplný poèet pøidaných filmù a seriálù v datasetu
+-- ÃšplnÃ½ pocet pridanÃ½ch filmu a seriÃ¡lu v datasetu
 
 
 SELECT 
@@ -19,11 +19,11 @@ FROM
 	JOIN NetflixGenre genr ON show.genre_id = genr.id
 WHERE 
 	type IS NOT NULL 
-	AND type <> 'William Wyler' -- Nepøesná data
+	AND type <> 'William Wyler' -- NepÃ¸esnÃ¡ data
 GROUP BY type;
 
 
--- Úprava sloupce 'date_added'
+-- Ãšprava sloupce 'date_added'
 
 
 SELECT date_added, CONVERT(date, date_added)
@@ -36,7 +36,7 @@ Update NetflixShows
 SET date_added = CONVERT(date, date_added);
 
 
--- Úplný poèet pøidaných filmù a serialù každý rok
+-- ÃšplnÃ½ pocet pridanÃ½ch filmu a serialu kaÅ¾dÃ½ rok
 
 
 SELECT 
@@ -54,7 +54,7 @@ GROUP BY
 ORDER BY 1;
 
 
--- TOP 5 nejaktivnìjších režisérù
+-- TOP 5 nejaktivnijÅ¡Ã­ch reÅ¾isÃ©ru
 
 
 SELECT TOP 5
@@ -67,7 +67,7 @@ GROUP BY director
 ORDER BY 2 DESC;
 
 
--- Nejèetnìjší žánry v datasetu
+-- NejcetnejÅ¡Ã­ Å¾Ã¡nry v datasetu
 
 --Filmy
 
@@ -86,7 +86,7 @@ GROUP BY
 ORDER BY 2 DESC;
    
 
---Seriály
+--SeriÃ¡ly
 
 SELECT DISTINCT
     TRIM(value) AS most_common_genre,
@@ -103,7 +103,7 @@ GROUP BY
 ORDER BY 2 DESC;
     
 
--- Top 10 nejdelších filmù pro dospìlé (TV-MA rating)
+-- Top 10 nejdelÅ¡Ã­ch filmu pro dospelÃ© (TV-MA rating)
 
 
 SELECT TOP 10
@@ -117,13 +117,13 @@ FROM
     JOIN NetflixGenre AS genr ON show.genre_id = genr.id
 WHERE 
     genr.type = 'Movie'
-	AND show.id <> 4254 -- Nepøesná data
+	AND show.id <> 4254 -- NepÃ¸esnÃ¡ data
 	AND rating = 'TV-MA'   
 ORDER BY 
     duration_in_minutes DESC;
 
 
--- TOP 10 zemí s nejvìtší rozmanitostí hercù a hereèek ve svých filmech/seriálech
+-- TOP 10 zemÃ­ s nejvetÅ¡Ã­ rozmanitostÃ­ hercu a herecek ve svÃ½ch filmech/seriÃ¡lech
 
 
 SELECT TOP 10 
@@ -137,7 +137,7 @@ GROUP BY country
 ORDER BY diversity_count DESC;
 
 
--- Procentuálnì
+-- ProcentuÃ¡lne
 
 
 WITH Top10countries AS (
@@ -161,7 +161,7 @@ ORDER BY
     diversity_percentage DESC;
 
 
--- Prùmìrná délka filmù v jednotlivých zemích pro malé dìti (TV-Y rating)
+-- PrumernÃ¡ dÃ©lka filmu v jednotlivÃ½ch zemÃ­ch pro malÃ© deti (TV-Y rating)
 
 
 DROP Table if exists #TempTable
@@ -182,7 +182,7 @@ FROM
     JOIN NetflixGenre AS genr ON show.genre_id = genr.id
 WHERE 
     genr.type = 'Movie'
-	AND show.id <> 4254 -- Nepøesná data
+	AND show.id <> 4254 -- NepÃ¸esnÃ¡ data
 	AND rating = 'TV-Y' 
 GROUP BY country;
 
@@ -202,7 +202,7 @@ ORDER BY
     AvgDuration_In_Minutes DESC;
 
 
--- Odstranìní pøebyteèných tabulek
+-- OdstranenÃ­ prebytecnÃ½ch tabulek
 
 
 DROP TABLE NetflixDescription
