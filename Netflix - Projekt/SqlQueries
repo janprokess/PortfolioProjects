@@ -9,7 +9,7 @@ FROM NetflixShows show
 	 JOIN NetflixDescription des ON show.desc_id = des.id;
 
 
--- Uplny pocet pridan˝ch filmu a seri·lu v datasetu
+-- Uplny pocet pridan√Ωch filmu a seri√°lu v datasetu
 
 
 SELECT 
@@ -67,7 +67,7 @@ GROUP BY director
 ORDER BY 2 DESC;
 
 
--- NejcetnejsÌ zanry v datasetu
+-- Nejcetnejs√≠ zanry v datasetu
 
 --Filmy
 
@@ -117,7 +117,7 @@ FROM
     JOIN NetflixGenre AS genr ON show.genre_id = genr.id
 WHERE 
     genr.type = 'Movie'
-	AND show.id <> 4254 -- Nep¯esn· data
+	AND show.id <> 4254 -- Nep√∏esn√° data
 	AND rating = 'TV-MA'   
 ORDER BY 
     duration_in_minutes DESC;
@@ -137,7 +137,7 @@ GROUP BY country
 ORDER BY diversity_count DESC;
 
 
--- Procentu·lne
+-- Procentu√°lne
 
 
 WITH Top10countries AS (
@@ -182,7 +182,7 @@ FROM
     JOIN NetflixGenre AS genr ON show.genre_id = genr.id
 WHERE 
     genr.type = 'Movie'
-	AND show.id <> 4254 -- Nep¯esn· data
+	AND show.id <> 4254 -- Nep√∏esn√° data
 	AND rating = 'TV-Y' 
 GROUP BY country;
 
@@ -202,7 +202,7 @@ ORDER BY
     AvgDuration_In_Minutes DESC;
 
 
--- OdstranenÌ prebytecnych tabulek
+-- Odstranen√≠ prebytecnych tabulek
 
 
 DROP TABLE NetflixDescription
