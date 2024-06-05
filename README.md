@@ -2,7 +2,7 @@
 ## Poruchy a zpoždění autobusů v NYC
  - Stáhněte kliknutím na 'View raw' a otevřete v MS Excel
  - Tento projekt se zaměřuje na analýzu hustoty dopravy v New York City a zkoumá příčiny a délku zpoždění autobusů. Součástí studie je hodnocení jednotlivých autobusových společností a oblastí, kde autobusy jezdí, a také zjišťování, zda hustota dopravy souvisí s různými dny v týdnu.
-Z analýzy vyplývá, že nejčastějšími příčinami zpoždění jsou hustá doprava a mechanické problémy. Společnost 'Selby Transportation' vykazuje největší zpoždění, zatímco nejvytíženější oblastí je Manhattan. Nejhustší doprava bývá na začátku týdne v pondělí, přičemž zpoždění i technické problémy postupně klesají v průběhu týdne.
+Z analýzy vyplývá, že nejčastějšími příčinami zpoždění jsou hustá doprava a mechanické problémy. Společnost 'Selby Transportation' vykazuje největší zpoždění, zatímco nejvytíženější oblastí je Manhattan. Nejhustší doprava bývá na začátku týdne v pondělí, přičemž zpoždění i poruchovost postupně klesají v průběhu týdne.
  - Projekt je v angličtině, protože to byla součást MS Excel kurzu - Analyst Builder / 2024
 ## Sledování zadluženosti v USA
  - Stáhněte kliknutím na 'View raw' a otevřete v MS Excel
